@@ -1,0 +1,25 @@
+class firework{
+  int x = int(random(0,600));
+  int max = int(random(50,200));
+  int w = 6;
+  int yspeed = int(random(625,675));
+  float change = random(2,6);
+  int a = int(random(0,255));
+  int b = int(random(0,255));
+  int c = int(random(0,255));
+
+  
+  void show(){
+    yspeed -= change;
+    fill(a,b,c);
+    rect(x,yspeed,w,w);
+    if(yspeed<=max){  
+      yspeed = int(random(625,675));
+      
+      for(int i = 0; i < 16; i++){
+        ellipse(x,max,24,24);
+      }
+      
+    }
+  }
+}
